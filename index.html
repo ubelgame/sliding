@@ -12,14 +12,12 @@
 </head>
 
 <body>
-    <h1>Shit</h1>
-    <section id="imgholder">
-        <div v-for='slide in slidingImages' 
-        class="slider effect" 
-        @click="effectsControl"
-        >
-            <img :src="slide.src"> 
+    <h1>{{name}}</h1>
+    <div id ="imgholder" class = "image-gallery">
+        <div class="image-container" v-for="(image, index) in images" :key="index">
+          <img class = "slideinactive" :src="image.src" @click="enlargeImage(index)" :class="{slideinactive ,'enlarged': enlargedIndex === index}">
         </div>
+      </div>
 
     </section>
 </body>
