@@ -20,6 +20,7 @@ body{
     display: flex;
    justify-content: center;
    align-items: flex-start;
+   overflow: hidden;
   }
 
   .image-container img {
@@ -27,7 +28,7 @@ body{
     height: 100%;
     object-fit: contain; */
     max-width: 100%;
-    height: auto;
+    min-height: 400px;
     margin-right: 20px;
   }
 
@@ -51,7 +52,13 @@ body{
   }
 
 .enlarged {
-    transform: scale(1.5);
+    transform: scaleZ(600px);
+    position:fixed;
+    /* width: 1000px; */
     transition: all 0.3s ease-in-out;
-    z-index: 1;
+    z-index: 69;
+    /* top: 0; */
+    left: 0;
+    right: 0;
+    /* display: flex ; */
   }
